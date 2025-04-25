@@ -6,7 +6,7 @@ config();
 const __dirname = path.resolve();
 const port = 3000;
 
-const appName = "Nginx Reverse Proxy Example";
+const appName = process.env.APP_NAME || 'MyApp';
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
